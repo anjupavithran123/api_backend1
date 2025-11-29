@@ -46,6 +46,10 @@ app.post("/proxy", async (req, res) => {
     res.status(500).json({ error: "Proxy failed", details: err.message });
   }
 });
+app.get("/", (req, res) => {
+  res.send("Backend is running!");
+});
+
 
 // -----------------------------
 // Start server
